@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A11A4E121517E4E00EDCED0 /* Tasks in Resources */ = {isa = PBXBuildFile; fileRef = 7A11A4E021517E4E00EDCED0 /* Tasks */; };
 		7A15B6A021516ED900EE2B04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A15B69F21516ED900EE2B04 /* AppDelegate.m */; };
 		7A15B6A321516ED900EE2B04 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A15B6A221516ED900EE2B04 /* ViewController.m */; };
 		7A15B6A821516ED900EE2B04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A15B6A721516ED900EE2B04 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A11A4E021517E4E00EDCED0 /* Tasks */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tasks; sourceTree = "<group>"; };
 		7A15B69B21516ED800EE2B04 /* Avia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A15B69E21516ED800EE2B04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7A15B69F21516ED900EE2B04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -40,6 +42,7 @@
 		7A15B69221516ED800EE2B04 = {
 			isa = PBXGroup;
 			children = (
+				7A11A4E021517E4E00EDCED0 /* Tasks */,
 				7A15B69D21516ED800EE2B04 /* Avia */,
 				7A15B69C21516ED800EE2B04 /* Products */,
 			);
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A11A4E121517E4E00EDCED0 /* Tasks in Resources */,
 				7A15B6AB21516ED900EE2B04 /* LaunchScreen.storyboard in Resources */,
 				7A15B6A821516ED900EE2B04 /* Assets.xcassets in Resources */,
 			);
