@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor orangeColor];
+    
     UIButton *button = [self makeButton:@"Go to next screen"];
     [button addTarget:self action:@selector(nextScreen:) forControlEvents:UIControlEventTouchUpInside];
     

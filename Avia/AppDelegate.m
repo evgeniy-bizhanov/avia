@@ -22,7 +22,6 @@
     self.window = [[UIWindow alloc] initWithFrame:frame];
     
     MainViewController *viewController = [[MainViewController alloc] init];
-    viewController.view.backgroundColor = [UIColor orangeColor];
     
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     
