@@ -21,10 +21,8 @@
     CGRect frame = [UIScreen mainScreen].bounds;
     self.window = [[UIWindow alloc] initWithFrame:frame];
     
-    self.window.backgroundColor = UIColor.redColor;
-    
     MainViewController *viewController = [[MainViewController alloc] init];
-    viewController.view.backgroundColor = [UIColor whiteColor];
+    viewController.view.backgroundColor = [UIColor orangeColor];
     
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     

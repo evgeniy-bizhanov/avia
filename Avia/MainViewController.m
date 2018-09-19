@@ -16,8 +16,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    UIButton *button = [self makeButton:@"Go to next screen"];
+    [button addTarget:self action:@selector(nextScreen:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:button];
 }
 
+- (UIButton *)makeButton:(NSString *)title {
+    
+    CGRect frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2 - 100,
+                              [UIScreen mainScreen].bounds.size.height/2 - 25,
+                              200,
+                              50);
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    [button setTitle:title forState:UIControlStateNormal];
+    button.frame = frame;
+    button.tintColor = UIColor.whiteColor;
+    
+    return button;
+}
+
+- (void)nextScreen:(UIButton *)sender {
+    
+//    [self.navigationController pushViewController:<#(nonnull UIViewController *)#> animated:<#(BOOL)#>]
+}
 
 @end
