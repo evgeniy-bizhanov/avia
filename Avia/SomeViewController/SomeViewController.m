@@ -32,7 +32,7 @@
     
     UILabel *label = [[UILabel alloc] initWithFrame:frame];
     label.font = [UIFont systemFontOfSize:24 weight:UIFontWeightBold];
-    label.textColor = UIColor.blueColor;
+    label.textColor = UIColor.purpleColor;
     label.textAlignment = NSTextAlignmentCenter;
     label.text = text;
     

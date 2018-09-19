@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "SomeViewController.h"
 
 @interface MainViewController ()
 
@@ -42,7 +43,8 @@
 
 - (void)nextScreen:(UIButton *)sender {
     
-//    [self.navigationController pushViewController:<#(nonnull UIViewController *)#> animated:<#(BOOL)#>]
+    SomeViewController *anotherViewController = [[SomeViewController alloc] init];
+    [self.navigationController pushViewController:anotherViewController animated:YES];
 }
 
 @end
