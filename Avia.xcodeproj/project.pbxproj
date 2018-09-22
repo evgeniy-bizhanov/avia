@@ -13,6 +13,7 @@
 		7A15B6A821516ED900EE2B04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A15B6A721516ED900EE2B04 /* Assets.xcassets */; };
 		7A15B6AB21516ED900EE2B04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A15B6A921516ED900EE2B04 /* LaunchScreen.storyboard */; };
 		7A15B6AE21516ED900EE2B04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A15B6AD21516ED900EE2B04 /* main.m */; };
+		7A25C82D2156C6E900A43FB4 /* SecondTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A25C82C2156C6E900A43FB4 /* SecondTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		7A15B6AA21516ED900EE2B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A15B6AC21516ED900EE2B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A15B6AD21516ED900EE2B04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7A25C82B2156C6E900A43FB4 /* SecondTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondTableViewController.h; sourceTree = "<group>"; };
+		7A25C82C2156C6E900A43FB4 /* SecondTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				7A15B69F21516ED900EE2B04 /* AppDelegate.m */,
 				7A15B6A121516ED900EE2B04 /* MainViewController.h */,
 				7A15B6A221516ED900EE2B04 /* MainViewController.m */,
+				7A25C82B2156C6E900A43FB4 /* SecondTableViewController.h */,
+				7A25C82C2156C6E900A43FB4 /* SecondTableViewController.m */,
 				7A15B6A721516ED900EE2B04 /* Assets.xcassets */,
 				7A15B6A921516ED900EE2B04 /* LaunchScreen.storyboard */,
 				7A15B6AC21516ED900EE2B04 /* Info.plist */,
@@ -142,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A15B6A321516ED900EE2B04 /* MainViewController.m in Sources */,
+				7A25C82D2156C6E900A43FB4 /* SecondTableViewController.m in Sources */,
 				7A15B6AE21516ED900EE2B04 /* main.m in Sources */,
 				7A15B6A021516ED900EE2B04 /* AppDelegate.m in Sources */,
 			);

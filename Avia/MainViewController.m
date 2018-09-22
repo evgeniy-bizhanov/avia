@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "SecondTableViewController.h"
 
 @interface MainViewController () <UITableViewDataSource>
 
@@ -45,6 +46,7 @@
     [self fillData];
     
     self.view.backgroundColor = [UIColor colorWithRed:0.46 green:0.84 blue:1.0 alpha:1.0];
+    self.title = @"UIView";
     
     // tableView
     
@@ -70,7 +72,8 @@
 // MARK: - Transitions
 
 - (void)nextScreen:(UIButton *)sender {
-    
+    SecondTableViewController *secondController = [[SecondTableViewController alloc] init];
+    [self.navigationController pushViewController:secondController animated:YES];
 }
 
 
