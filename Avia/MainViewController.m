@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "SecondTableViewController.h"
+#import "MyTableViewCell.h"
 
 @interface MainViewController () <UITableViewDataSource>
 
@@ -84,7 +85,8 @@
     UITableView *tableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
     
     tableView.dataSource = self;
-    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+//    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [tableView registerClass:[MyTableViewCell class] forCellReuseIdentifier:@"myCell"];
     
     return tableView;
 }
@@ -106,8 +108,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    cell.textLabel.text = _data[indexPath.row];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+//    cell.textLabel.text = _data[indexPath.row];
+    
+    MyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
+    cell.label.text = _data[indexPath.row];
     
     return cell;
 }

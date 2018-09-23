@@ -7,6 +7,7 @@
 //
 
 #import "SecondTableViewController.h"
+#import "MyTableViewCell.h"
 
 @interface SecondTableViewController ()
 
@@ -28,7 +29,8 @@
     [super viewDidLoad];
     
     self.title = @"UITableView";
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+//    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self.tableView registerClass:[MyTableViewCell class] forCellReuseIdentifier:@"myCell"];
     
     [self fillData];
 }
@@ -41,8 +43,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    cell.textLabel.text = _data[indexPath.row];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+//    cell.textLabel.text = _data[indexPath.row];
+    
+    MyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
+    cell.label.text = _data[indexPath.row];
     
     return cell;
 }
