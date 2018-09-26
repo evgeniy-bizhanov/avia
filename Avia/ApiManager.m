@@ -7,11 +7,12 @@
 //
 
 #import "ApiManager.h"
+#import "Entity/News.h"
 
 #define WHERE_AM_I @"https://ipinfo.io"
 
 #define API_TOKEN @"771f778018c44722ab3af6c282ff74bf"
-#define API_URL @"https://newsapi.org/v2/top-headlines?country=%@&apiKey=%@";
+#define API_URL @"https://newsapi.org/v2/top-headlines?country=%@&apiKey=%@"
 
 @implementation ApiManager
 
@@ -26,7 +27,14 @@
 }
 
 - (void)fetchNews {
-    
+    [self country:^(NSString * _Nonnull countryCode) {
+        NSString *url = [NSString stringWithFormat:API_URL, countryCode, API_TOKEN];
+        [self load:url withCompletion:^(id  _Nullable result) {
+            NSDictionary *json = result;
+            
+            News *news = [[News alloc] initWithDictionary:json];
+        }];
+    }];
 }
 
 - (void)country:(void (^)(NSString *countryCode)) completion {
