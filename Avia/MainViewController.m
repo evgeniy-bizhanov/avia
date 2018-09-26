@@ -7,8 +7,15 @@
 //
 
 #import "MainViewController.h"
+#import "ApiManager.h"
+#import "NewsTableViewCell.h"
+#import "Entity/Article.h"
+
+#define REUSE_IDENTIFIER @"newsCell"
 
 @interface MainViewController ()
+
+@property(nonatomic, strong) NSArray *news;
 
 @end
 
@@ -16,8 +23,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [self.tableView registerClass:[NewsTableViewCell class] forCellReuseIdentifier:REUSE_IDENTIFIER];
+    
+    [ApiManager.sharedInstance fetchNews:^(News * _Nonnull news) {
+        self->_news = news.articles;
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+    }];
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _news.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:REUSE_IDENTIFIER forIndexPath:indexPath];
+    
+    Article *article = _news[indexPath.row];
+    
+    cell.title.text = article.title;
+    
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 120;
+}
 
 @end

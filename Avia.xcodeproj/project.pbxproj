@@ -17,6 +17,7 @@
 		7ABD5158215B5300004C0037 /* Source.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABD5157215B5300004C0037 /* Source.m */; };
 		7ABD515B215B5317004C0037 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABD515A215B5317004C0037 /* Article.m */; };
 		7ABD515E215B532F004C0037 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABD515D215B532F004C0037 /* News.m */; };
+		7ABD5161215BA740004C0037 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABD5160215BA740004C0037 /* NewsTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		7ABD515A215B5317004C0037 /* Article.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Article.m; sourceTree = "<group>"; };
 		7ABD515C215B532F004C0037 /* News.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
 		7ABD515D215B532F004C0037 /* News.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
+		7ABD515F215BA740004C0037 /* NewsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
+		7ABD5160215BA740004C0037 /* NewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,8 @@
 				7A15B69F21516ED900EE2B04 /* AppDelegate.m */,
 				7A15B6A121516ED900EE2B04 /* MainViewController.h */,
 				7A15B6A221516ED900EE2B04 /* MainViewController.m */,
+				7ABD515F215BA740004C0037 /* NewsTableViewCell.h */,
+				7ABD5160215BA740004C0037 /* NewsTableViewCell.m */,
 				7A15B6A721516ED900EE2B04 /* Assets.xcassets */,
 				7A15B6A921516ED900EE2B04 /* LaunchScreen.storyboard */,
 				7A15B6AC21516ED900EE2B04 /* Info.plist */,
@@ -175,6 +180,7 @@
 				7ABD515B215B5317004C0037 /* Article.m in Sources */,
 				7A15B6AE21516ED900EE2B04 /* main.m in Sources */,
 				7ABD5158215B5300004C0037 /* Source.m in Sources */,
+				7ABD5161215BA740004C0037 /* NewsTableViewCell.m in Sources */,
 				7A15B6A021516ED900EE2B04 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
