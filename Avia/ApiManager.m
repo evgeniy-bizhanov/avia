@@ -7,7 +7,6 @@
 //
 
 #import "ApiManager.h"
-#import "Entity/News.h"
 
 #define WHERE_AM_I @"https://ipinfo.io"
 
@@ -26,13 +25,14 @@
     return instance;
 }
 
-- (void)fetchNews {
+- (void)fetchNews:(void (^)(News *news)) completion {
     [self country:^(NSString * _Nonnull countryCode) {
         NSString *url = [NSString stringWithFormat:API_URL, countryCode, API_TOKEN];
         [self load:url withCompletion:^(id  _Nullable result) {
             NSDictionary *json = result;
             
             News *news = [[News alloc] initWithDictionary:json];
+            completion(news);
         }];
     }];
 }

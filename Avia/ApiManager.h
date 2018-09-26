@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import "Entity/News.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedInstance;
 - (void)country:(void (^)(NSString *countryCode)) completion;
-- (void)fetchNews;
+- (void)fetchNews:(void (^)(News *news)) completion;
 
 @end
 
