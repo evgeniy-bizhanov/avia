@@ -8,13 +8,22 @@
 
 #import "NewsTableViewCell.h"
 
+@interface NewsTableViewCell()
+
+
+
+@end
+
 @implementation NewsTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
     if (self) {
+        
         _title = [[UILabel alloc] initWithFrame:CGRectZero];
+        [_title setFont:[UIFont boldSystemFontOfSize:15]];
+        
         [self.contentView addSubview:_title];
     }
     
@@ -26,14 +35,14 @@
     
     CGFloat margin = 16;
     CGSize containerSize = self.contentView.frame.size;
-    
-    CGFloat height = 20;
+
+//    CGFloat height = 20;
     CGRect frame = CGRectMake(
                               margin,
-                              containerSize.height / 2 - height / 2,
+                              0,
                               containerSize.width - 2 * margin,
-                              height);
-    
+                              containerSize.height);
+
     _title.frame = frame;
 }
 
