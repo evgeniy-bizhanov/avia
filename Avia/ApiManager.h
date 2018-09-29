@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedInstance;
 - (void)country:(void (^)(NSString *countryCode)) completion;
-- (void)fetchNews;
+- (void)fetchArts;
 
 @end
 
