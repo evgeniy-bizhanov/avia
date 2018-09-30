@@ -13,6 +13,8 @@
 		7A15B6A821516ED900EE2B04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A15B6A721516ED900EE2B04 /* Assets.xcassets */; };
 		7A15B6AB21516ED900EE2B04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A15B6A921516ED900EE2B04 /* LaunchScreen.storyboard */; };
 		7A15B6AE21516ED900EE2B04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A15B6AD21516ED900EE2B04 /* main.m */; };
+		7A1BD25B216116ED00438189 /* Geo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BD25A216116ED00438189 /* Geo.m */; };
+		7A1BD25E21611BDD00438189 /* ArtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BD25D21611BDD00438189 /* ArtViewController.m */; };
 		7A31BB66215FCBB000696BEA /* Art.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A31BB65215FCBB000696BEA /* Art.m */; };
 		7A31BB69215FD09300696BEA /* Arts.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A31BB68215FD09300696BEA /* Arts.m */; };
 		7A495768215A8DD500192CE4 /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A495767215A8DD500192CE4 /* ApiManager.m */; };
@@ -29,6 +31,10 @@
 		7A15B6AA21516ED900EE2B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A15B6AC21516ED900EE2B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A15B6AD21516ED900EE2B04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7A1BD259216116ED00438189 /* Geo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Geo.h; sourceTree = "<group>"; };
+		7A1BD25A216116ED00438189 /* Geo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Geo.m; sourceTree = "<group>"; };
+		7A1BD25C21611BDD00438189 /* ArtViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtViewController.h; sourceTree = "<group>"; };
+		7A1BD25D21611BDD00438189 /* ArtViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtViewController.m; sourceTree = "<group>"; };
 		7A31BB64215FCBB000696BEA /* Art.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Art.h; sourceTree = "<group>"; };
 		7A31BB65215FCBB000696BEA /* Art.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Art.m; sourceTree = "<group>"; };
 		7A31BB67215FD09300696BEA /* Arts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Arts.h; sourceTree = "<group>"; };
@@ -68,6 +74,7 @@
 		7A15B69D21516ED800EE2B04 /* Avia */ = {
 			isa = PBXGroup;
 			children = (
+				7A1BD258216116D400438189 /* Helper */,
 				7ABD5155215B4F85004C0037 /* Entity */,
 				7A495766215A8DD500192CE4 /* ApiManager.h */,
 				7A495767215A8DD500192CE4 /* ApiManager.m */,
@@ -75,12 +82,23 @@
 				7A15B69F21516ED900EE2B04 /* AppDelegate.m */,
 				7A15B6A121516ED900EE2B04 /* MainViewController.h */,
 				7A15B6A221516ED900EE2B04 /* MainViewController.m */,
+				7A1BD25C21611BDD00438189 /* ArtViewController.h */,
+				7A1BD25D21611BDD00438189 /* ArtViewController.m */,
 				7A15B6A721516ED900EE2B04 /* Assets.xcassets */,
 				7A15B6A921516ED900EE2B04 /* LaunchScreen.storyboard */,
 				7A15B6AC21516ED900EE2B04 /* Info.plist */,
 				7A15B6AD21516ED900EE2B04 /* main.m */,
 			);
 			path = Avia;
+			sourceTree = "<group>";
+		};
+		7A1BD258216116D400438189 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7A1BD259216116ED00438189 /* Geo.h */,
+				7A1BD25A216116ED00438189 /* Geo.m */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		7ABD5155215B4F85004C0037 /* Entity */ = {
@@ -168,8 +186,10 @@
 				7A15B6A321516ED900EE2B04 /* MainViewController.m in Sources */,
 				7A15B6AE21516ED900EE2B04 /* main.m in Sources */,
 				7A31BB69215FD09300696BEA /* Arts.m in Sources */,
+				7A1BD25E21611BDD00438189 /* ArtViewController.m in Sources */,
 				7A15B6A021516ED900EE2B04 /* AppDelegate.m in Sources */,
 				7A31BB66215FCBB000696BEA /* Art.m in Sources */,
+				7A1BD25B216116ED00438189 /* Geo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

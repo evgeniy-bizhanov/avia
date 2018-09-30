@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import "Entity/Arts.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedInstance;
 - (void)country:(void (^)(NSString *countryCode)) completion;
-- (void)fetchArts;
+- (void)fetchArts:(void (^)(Arts *arts)) completion;
 
 @end
 

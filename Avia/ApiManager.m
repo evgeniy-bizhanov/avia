@@ -17,7 +17,7 @@
 
 #define WHERE_AM_I @"https://ipinfo.io"
 
-#define API_TOKEN @"771f778018c44722ab3af6c282ff74bf"
+//#define API_TOKEN @"771f778018c44722ab3af6c282ff74bf"
 #define API_URL @"https://data.honolulu.gov/resource/csir-pcj2.json"
 
 @implementation ApiManager
@@ -32,13 +32,12 @@
     return instance;
 }
 
-- (void)fetchArts {
+- (void)fetchArts:(void (^)(Arts *arts)) completion {
     [self country:^(NSString * _Nonnull countryCode) {
 //        NSString *url = [NSString stringWithFormat:API_URL, countryCode, API_TOKEN];
         [self load:API_URL withCompletion:^(id  _Nullable result) {
-            NSDictionary *json = result;
-            
-            Arts *arts = [[Arts alloc] initWithDictionary:json];
+            Arts *arts = [[Arts alloc] initWithDictionary:result];
+            completion(arts);
         }];
     }];
 }
