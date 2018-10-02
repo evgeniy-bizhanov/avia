@@ -6,7 +6,7 @@
 //  Copyright © 2018 Евгений Бижанов. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "ArtsViewController.h"
 #import <MapKit/MapKit.h>
 #import "ApiManager.h"
 #import "Entity/Art.h"
@@ -14,7 +14,7 @@
 #import "ArtViewController.h"
 
 
-@interface MainViewController () <MKMapViewDelegate>
+@interface ArtsViewController () <MKMapViewDelegate>
 
 @property(nonatomic, strong) MKMapView *mapView;
 @property(nonatomic, strong) Arts *arts;
@@ -22,12 +22,12 @@
 
 @end
 
-@implementation MainViewController
+@implementation ArtsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"Arts of Honolulu";
+    self.title = @"Arts";
     
     CGRect frame = self.view.frame;
     _mapView = [[MKMapView alloc] initWithFrame:frame];
