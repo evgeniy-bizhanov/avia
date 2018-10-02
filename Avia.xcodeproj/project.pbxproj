@@ -16,6 +16,8 @@
 		7A1BD25E21611BDD00438189 /* ArtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BD25D21611BDD00438189 /* ArtViewController.m */; };
 		7A31BB66215FCBB000696BEA /* Art.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A31BB65215FCBB000696BEA /* Art.m */; };
 		7A31BB69215FD09300696BEA /* Arts.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A31BB68215FD09300696BEA /* Arts.m */; };
+		7A432EA52163F54B00EA9B25 /* ArtsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A432EA42163F54B00EA9B25 /* ArtsCollectionViewController.m */; };
+		7A432EA82163FFDD00EA9B25 /* ArtCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A432EA72163FFDD00EA9B25 /* ArtCollectionViewCell.m */; };
 		7A495768215A8DD500192CE4 /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A495767215A8DD500192CE4 /* ApiManager.m */; };
 		7A764A912163EA0D00C9B687 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A764A902163EA0D00C9B687 /* TabBarViewController.m */; };
 /* End PBXBuildFile section */
@@ -38,6 +40,10 @@
 		7A31BB65215FCBB000696BEA /* Art.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Art.m; sourceTree = "<group>"; };
 		7A31BB67215FD09300696BEA /* Arts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Arts.h; sourceTree = "<group>"; };
 		7A31BB68215FD09300696BEA /* Arts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Arts.m; sourceTree = "<group>"; };
+		7A432EA32163F54B00EA9B25 /* ArtsCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtsCollectionViewController.h; sourceTree = "<group>"; };
+		7A432EA42163F54B00EA9B25 /* ArtsCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtsCollectionViewController.m; sourceTree = "<group>"; };
+		7A432EA62163FFDC00EA9B25 /* ArtCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtCollectionViewCell.h; sourceTree = "<group>"; };
+		7A432EA72163FFDD00EA9B25 /* ArtCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtCollectionViewCell.m; sourceTree = "<group>"; };
 		7A495766215A8DD500192CE4 /* ApiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
 		7A495767215A8DD500192CE4 /* ApiManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
 		7A764A8F2163EA0D00C9B687 /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
@@ -86,6 +92,10 @@
 				7A15B6A221516ED900EE2B04 /* ArtsViewController.m */,
 				7A1BD25C21611BDD00438189 /* ArtViewController.h */,
 				7A1BD25D21611BDD00438189 /* ArtViewController.m */,
+				7A432EA32163F54B00EA9B25 /* ArtsCollectionViewController.h */,
+				7A432EA42163F54B00EA9B25 /* ArtsCollectionViewController.m */,
+				7A432EA62163FFDC00EA9B25 /* ArtCollectionViewCell.h */,
+				7A432EA72163FFDD00EA9B25 /* ArtCollectionViewCell.m */,
 				7A15B6A721516ED900EE2B04 /* Assets.xcassets */,
 				7A15B6A921516ED900EE2B04 /* LaunchScreen.storyboard */,
 				7A15B6AC21516ED900EE2B04 /* Info.plist */,
@@ -184,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A495768215A8DD500192CE4 /* ApiManager.m in Sources */,
+				7A432EA82163FFDD00EA9B25 /* ArtCollectionViewCell.m in Sources */,
 				7A15B6A321516ED900EE2B04 /* ArtsViewController.m in Sources */,
 				7A15B6AE21516ED900EE2B04 /* main.m in Sources */,
 				7A31BB69215FD09300696BEA /* Arts.m in Sources */,
@@ -191,6 +202,7 @@
 				7A15B6A021516ED900EE2B04 /* AppDelegate.m in Sources */,
 				7A31BB66215FCBB000696BEA /* Art.m in Sources */,
 				7A764A912163EA0D00C9B687 /* TabBarViewController.m in Sources */,
+				7A432EA52163F54B00EA9B25 /* ArtsCollectionViewController.m in Sources */,
 				7A1BD25B216116ED00438189 /* Geo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,7 @@
 
 #import "TabBarViewController.h"
 #import "ArtsViewController.h"
+#import "ArtsCollectionViewController.h"
 
 @interface TabBarViewController ()
 
@@ -20,8 +21,18 @@
     
     ArtsViewController *artsViewController = [ArtsViewController new];
     
+    
+    UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
+    layout.itemSize = CGSizeMake(50, 50);
+    layout.minimumLineSpacing = 10;
+    layout.minimumInteritemSpacing = 10;
+    layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    
+    ArtsCollectionViewController *artsCollection = [[ArtsCollectionViewController alloc] initWithCollectionViewLayout:layout];
+    
     self.viewControllers = @[
-                             [[UINavigationController alloc] initWithRootViewController:artsViewController]
+                             [[UINavigationController alloc] initWithRootViewController:artsViewController],
+                             [[UINavigationController alloc] initWithRootViewController:artsCollection]
                              ];
 }
 
