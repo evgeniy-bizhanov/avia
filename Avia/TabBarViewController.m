@@ -16,19 +16,38 @@
 
 @implementation TabBarViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+// MARK: - Фабрики табов
+
+- (ArtsViewController *)resolveArtsController {
+    return [ArtsViewController new];
+}
+
+- (ArtsCollectionViewController *)resolveArtsCollectionController {
+    double cellSpacing = 10;
+    double cellMargin = 10;
     
-    ArtsViewController *artsViewController = [ArtsViewController new];
-    
+    double width = floor(self.view.frame.size.width / 2 - cellSpacing / 2 - cellMargin);
+    double height = width;
     
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
-    layout.itemSize = CGSizeMake(50, 50);
-    layout.minimumLineSpacing = 10;
-    layout.minimumInteritemSpacing = 10;
+    layout.itemSize = CGSizeMake(width, height);
+    layout.minimumLineSpacing = cellSpacing;
+    layout.minimumInteritemSpacing = cellSpacing;
+    layout.sectionInset = UIEdgeInsetsMake(cellMargin, cellMargin, cellMargin, cellMargin);
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     
     ArtsCollectionViewController *artsCollection = [[ArtsCollectionViewController alloc] initWithCollectionViewLayout:layout];
+    return artsCollection;
+}
+
+
+// MARK: - Инициализатор
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    ArtsViewController * artsViewController = [self resolveArtsController];
+    ArtsCollectionViewController * artsCollection = [self resolveArtsCollectionController];
     
     self.viewControllers = @[
                              [[UINavigationController alloc] initWithRootViewController:artsViewController],

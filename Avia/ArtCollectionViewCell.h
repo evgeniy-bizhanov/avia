@@ -12,7 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ArtCollectionViewCell : UICollectionViewCell
 
-@property(nonatomic, strong) UIImageView *image;
+@property(nonatomic, strong) UILabel *title;
+@property(nonatomic, strong) UITextView *subtitle;
+@property(nonatomic, assign) CGPoint *coordinate;
 
 @end
 

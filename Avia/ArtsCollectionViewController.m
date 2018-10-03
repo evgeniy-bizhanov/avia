@@ -8,6 +8,7 @@
 
 #import "ArtsCollectionViewController.h"
 #import "ApiManager.h"
+#import "Entity/Art.h"
 #import "Entity/Arts.h"
 #import "ArtCollectionViewCell.h"
 
@@ -26,9 +27,6 @@ static NSString * const reuseIdentifier = @"Cell";
     
     self.title = @"Table Arts";
     self.collectionView.backgroundColor = UIColor.whiteColor;
-    
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
     [self.collectionView registerClass:[ArtCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
@@ -49,48 +47,21 @@ static NSString * const reuseIdentifier = @"Cell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
     return _arts.array.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ArtCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    // Configure the cell
-    cell.backgroundColor = UIColor.redColor;
+    Art *art = _arts.array[indexPath.row];
+    
+    cell.title.text = art.title;
+    cell.subtitle.text = art.desc;
+    
+    CGPoint coordinate = CGPointMake(art.latitude.doubleValue, art.longitude.doubleValue);
+    cell.coordinate = &(coordinate);
     
     return cell;
 }
-
-#pragma mark <UICollectionViewDelegate>
-
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 @end
