@@ -20,18 +20,11 @@
     
     CGRect frame = [UIScreen mainScreen].bounds;
     self.window = [[UIWindow alloc] initWithFrame:frame];
-    
-    self.window.backgroundColor = UIColor.redColor;
-    
+
     TabBarViewController *viewController = [[TabBarViewController alloc] init];
     viewController.view.backgroundColor = [UIColor whiteColor];
     
-//    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-    
-//    self.window.rootViewController = navigationController;
-    
     self.window.rootViewController = viewController;
-    
     [self.window makeKeyAndVisible];
     
     return YES;
