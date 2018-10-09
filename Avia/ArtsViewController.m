@@ -27,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"Arts";
+//    self.title = @"Arts";
     
     CGRect frame = self.view.frame;
     _mapView = [[MKMapView alloc] initWithFrame:frame];

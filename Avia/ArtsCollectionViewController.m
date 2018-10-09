@@ -27,7 +27,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"Search Arts";
+//    self.title = @"Search Arts";
     self.collectionView.backgroundColor = UIColor.whiteColor;
     
     _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];

@@ -19,7 +19,9 @@
 // MARK: - Фабрики табов
 
 - (ArtsViewController *)resolveArtsController {
-    return [ArtsViewController new];
+    ArtsViewController *controller = [ArtsViewController new];
+    controller.title = @"Arts";
+    return controller;
 }
 
 - (ArtsCollectionViewController *)resolveArtsCollectionController {
@@ -36,8 +38,10 @@
     layout.sectionInset = UIEdgeInsetsMake(cellMargin, cellMargin, cellMargin, cellMargin);
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     
-    ArtsCollectionViewController *artsCollection = [[ArtsCollectionViewController alloc] initWithCollectionViewLayout:layout];
-    return artsCollection;
+    ArtsCollectionViewController *controller = [[ArtsCollectionViewController alloc] initWithCollectionViewLayout:layout];
+    controller.title = @"Search Arts";
+    
+    return controller;
 }
 
 
