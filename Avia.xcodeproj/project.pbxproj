@@ -22,6 +22,9 @@
 		7A495768215A8DD500192CE4 /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A495767215A8DD500192CE4 /* ApiManager.m */; };
 		7A764A912163EA0D00C9B687 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A764A902163EA0D00C9B687 /* TabBarViewController.m */; };
 		7AFDEBD9216CB19C004E54C5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDEBD7216CB19C004E54C5 /* Model.xcdatamodeld */; };
+		7AFDEC0F216CC4CC004E54C5 /* MOArt+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDEC0D216CC4CC004E54C5 /* MOArt+CoreDataClass.m */; };
+		7AFDEC10216CC4CC004E54C5 /* MOArt+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDEC0E216CC4CC004E54C5 /* MOArt+CoreDataProperties.m */; };
+		7AFDEC14216CC523004E54C5 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDEC13216CC523004E54C5 /* CoreDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +56,12 @@
 		7A764A8F2163EA0D00C9B687 /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		7A764A902163EA0D00C9B687 /* TabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		7AFDEBD8216CB19C004E54C5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		7AFDEC0B216CC4CC004E54C5 /* MOArt+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MOArt+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7AFDEC0C216CC4CC004E54C5 /* MOArt+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MOArt+CoreDataClass.h"; sourceTree = "<group>"; };
+		7AFDEC0D216CC4CC004E54C5 /* MOArt+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MOArt+CoreDataClass.m"; sourceTree = "<group>"; };
+		7AFDEC0E216CC4CC004E54C5 /* MOArt+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MOArt+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7AFDEC12216CC523004E54C5 /* CoreDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		7AFDEC13216CC523004E54C5 /* CoreDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		E463EFFFFC7D99D573046ECE /* Pods-Avia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Avia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Avia/Pods-Avia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +108,7 @@
 		7A15B69D21516ED800EE2B04 /* Avia */ = {
 			isa = PBXGroup;
 			children = (
+				7AFDEC11216CC505004E54C5 /* CoreData */,
 				7A1BD258216116D400438189 /* Helper */,
 				7ABD5155215B4F85004C0037 /* Entity */,
 				7A495766215A8DD500192CE4 /* ApiManager.h */,
@@ -132,6 +142,10 @@
 		7ABD5155215B4F85004C0037 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				7AFDEC0B216CC4CC004E54C5 /* MOArt+CoreDataProperties.h */,
+				7AFDEC0C216CC4CC004E54C5 /* MOArt+CoreDataClass.h */,
+				7AFDEC0D216CC4CC004E54C5 /* MOArt+CoreDataClass.m */,
+				7AFDEC0E216CC4CC004E54C5 /* MOArt+CoreDataProperties.m */,
 				7A31BB64215FCBB000696BEA /* Art.h */,
 				7A31BB65215FCBB000696BEA /* Art.m */,
 				7A31BB67215FD09300696BEA /* Arts.h */,
@@ -149,6 +163,15 @@
 				7A15B6AC21516ED900EE2B04 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		7AFDEC11216CC505004E54C5 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7AFDEC12216CC523004E54C5 /* CoreDataManager.h */,
+				7AFDEC13216CC523004E54C5 /* CoreDataManager.m */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		F2015CB0D1B6446DED0DAB22 /* Frameworks */ = {
@@ -191,6 +214,7 @@
 				TargetAttributes = {
 					7A15B69A21516ED800EE2B04 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -250,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AFDEC0F216CC4CC004E54C5 /* MOArt+CoreDataClass.m in Sources */,
 				7A495768215A8DD500192CE4 /* ApiManager.m in Sources */,
 				7A432EA82163FFDD00EA9B25 /* ArtCollectionViewCell.m in Sources */,
 				7A15B6A321516ED900EE2B04 /* ArtsViewController.m in Sources */,
@@ -261,7 +286,9 @@
 				7A764A912163EA0D00C9B687 /* TabBarViewController.m in Sources */,
 				7A432EA52163F54B00EA9B25 /* ArtsCollectionViewController.m in Sources */,
 				7A1BD25B216116ED00438189 /* Geo.m in Sources */,
+				7AFDEC14216CC523004E54C5 /* CoreDataManager.m in Sources */,
 				7AFDEBD9216CB19C004E54C5 /* Model.xcdatamodeld in Sources */,
+				7AFDEC10216CC4CC004E54C5 /* MOArt+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +423,7 @@
 			baseConfigurationReference = E463EFFFFC7D99D573046ECE /* Pods-Avia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6TZ3MZ977X;
 				INFOPLIST_FILE = Resources/Info.plist;
@@ -405,6 +433,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bizhanov.Avia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -414,6 +444,7 @@
 			baseConfigurationReference = 418A6AB6C9CA0C2A18338402 /* Pods-Avia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6TZ3MZ977X;
 				INFOPLIST_FILE = Resources/Info.plist;
@@ -423,6 +454,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bizhanov.Avia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
