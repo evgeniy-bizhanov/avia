@@ -51,14 +51,14 @@
 
 
 - (NSArray *) favorites {
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"MOArt"];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Art"];
     return [_persistentContainer.viewContext executeFetchRequest:request error:nil];
 }
 
 
 - (void) addToFavorite:(Art *)art {
     MOArt *favorite = [NSEntityDescription
-                       insertNewObjectForEntityForName:@"MOArt"
+                       insertNewObjectForEntityForName:@"Art"
                        inManagedObjectContext:_persistentContainer.viewContext];
     
     favorite.title = art.title;
@@ -75,7 +75,7 @@
 }
 
 - (MOArt *)favoriteFromArt:(Art *)art {
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"MOArt"];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Art"];
     request.predicate = [NSPredicate
                          predicateWithFormat:@"title == %@ AND latitude == %@ AND longitude == %@",
                          art.title, art.latitude, art.longitude];

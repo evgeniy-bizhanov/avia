@@ -19,6 +19,18 @@
 
 @implementation ArtCollectionViewCell
 
+- (void)setIsFavorite:(BOOL)isFavorite {
+    _isFavorite = isFavorite;
+    
+    if (isFavorite) {
+        _favoriteButton.backgroundColor = [UIColor colorWithRed:0.35 green:0.59 blue:0.82 alpha:0.9];
+        _favoriteButton.layer.borderColor = [[UIColor colorWithRed:0.3 green:0.5 blue:0.72 alpha:1.0] CGColor];
+    } else {
+        _favoriteButton.backgroundColor = [UIColor colorWithRed:0.95 green:0.98 blue:1.0 alpha:0.9];
+        _favoriteButton.layer.borderColor = [[UIColor colorWithRed:0.42 green:0.72 blue:0.93 alpha:1.0] CGColor];
+    }
+}
+
 
 // MARK: - Позиционирование карты
 
@@ -80,6 +92,7 @@
     
     _subtitle = [[UITextView alloc] initWithFrame:subtitleFrame];
     _subtitle.backgroundColor = UIColor.clearColor;
+    _subtitle.userInteractionEnabled = false;
 }
 
 - (CGRect)calculateAboutFrame {
@@ -92,6 +105,20 @@
     return aboutFrame;
 }
 
+
+- (void)setupFavoriteButton {
+    CGRect frame = CGRectMake(10, 10, 30, 30);
+    _favoriteButton = [[UIView alloc] initWithFrame:frame];
+    _favoriteButton.layer.cornerRadius = 15;
+    _favoriteButton.layer.borderWidth = 1;
+    
+    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addFavorite:)];
+    [_favoriteButton addGestureRecognizer:recognizer];
+}
+
+- (void)addFavorite:(UITapGestureRecognizer *)sender {
+    _markAsFavorite();
+}
 
 // MARK: - Инициализатор
 
@@ -107,12 +134,14 @@
         [self setupBlurView:&aboutFrame];
         [self setupTitle:&aboutFrame];
         [self setupSubtitle:&aboutFrame];
+        [self setupFavoriteButton];
         
         [_blurView.contentView addSubview:_title];
         [_blurView.contentView addSubview:_subtitle];
         
         [self.contentView addSubview:_mapView];
         [self.contentView addSubview:_blurView];
+        [self.contentView addSubview:_favoriteButton];
     }
     
     return self;

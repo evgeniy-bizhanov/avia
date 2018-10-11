@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) UILabel *title;
 @property(nonatomic, strong) UITextView *subtitle;
 @property(nonatomic, assign) CGPoint *coordinate;
+@property(nonatomic, strong) UIView *favoriteButton;
+@property(nonatomic, assign) BOOL isFavorite;
+@property (nonatomic, copy) void (^markAsFavorite)(void);
 
 @end
 

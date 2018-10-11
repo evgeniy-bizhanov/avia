@@ -25,6 +25,7 @@
 		7AFDEC0F216CC4CC004E54C5 /* MOArt+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDEC0D216CC4CC004E54C5 /* MOArt+CoreDataClass.m */; };
 		7AFDEC10216CC4CC004E54C5 /* MOArt+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDEC0E216CC4CC004E54C5 /* MOArt+CoreDataProperties.m */; };
 		7AFDEC14216CC523004E54C5 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDEC13216CC523004E54C5 /* CoreDataManager.m */; };
+		7AFDEC17216E656B004E54C5 /* FavoritesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDEC16216E656B004E54C5 /* FavoritesCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,8 @@
 		7AFDEC0E216CC4CC004E54C5 /* MOArt+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MOArt+CoreDataProperties.m"; sourceTree = "<group>"; };
 		7AFDEC12216CC523004E54C5 /* CoreDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		7AFDEC13216CC523004E54C5 /* CoreDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		7AFDEC15216E656B004E54C5 /* FavoritesCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoritesCollectionViewController.h; sourceTree = "<group>"; };
+		7AFDEC16216E656B004E54C5 /* FavoritesCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoritesCollectionViewController.m; sourceTree = "<group>"; };
 		E463EFFFFC7D99D573046ECE /* Pods-Avia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Avia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Avia/Pods-Avia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +126,8 @@
 				7A1BD25D21611BDD00438189 /* ArtViewController.m */,
 				7A432EA32163F54B00EA9B25 /* ArtsCollectionViewController.h */,
 				7A432EA42163F54B00EA9B25 /* ArtsCollectionViewController.m */,
+				7AFDEC15216E656B004E54C5 /* FavoritesCollectionViewController.h */,
+				7AFDEC16216E656B004E54C5 /* FavoritesCollectionViewController.m */,
 				7A432EA62163FFDC00EA9B25 /* ArtCollectionViewCell.h */,
 				7A432EA72163FFDD00EA9B25 /* ArtCollectionViewCell.m */,
 				7A15B6AD21516ED900EE2B04 /* main.m */,
@@ -286,6 +291,7 @@
 				7A764A912163EA0D00C9B687 /* TabBarViewController.m in Sources */,
 				7A432EA52163F54B00EA9B25 /* ArtsCollectionViewController.m in Sources */,
 				7A1BD25B216116ED00438189 /* Geo.m in Sources */,
+				7AFDEC17216E656B004E54C5 /* FavoritesCollectionViewController.m in Sources */,
 				7AFDEC14216CC523004E54C5 /* CoreDataManager.m in Sources */,
 				7AFDEBD9216CB19C004E54C5 /* Model.xcdatamodeld in Sources */,
 				7AFDEC10216CC4CC004E54C5 /* MOArt+CoreDataProperties.m in Sources */,

@@ -10,7 +10,9 @@
 #import "ApiManager.h"
 #import "Entity/Art.h"
 #import "Entity/Arts.h"
+#import "CoreData/CoreDataManager.h"
 #import "ArtCollectionViewCell.h"
+#import "FavoritesCollectionViewController.h"
 
 @interface ArtsCollectionViewController () <UISearchResultsUpdating>
 
@@ -45,6 +47,22 @@ static NSString * const reuseIdentifier = @"Cell";
             [self.collectionView reloadData];
         });
     }];
+    
+    UIBarButtonItem *favorites = [[UIBarButtonItem alloc]
+                                  initWithTitle:@"Favorites"
+                                  style:UIBarButtonItemStylePlain
+                                  target:self
+                                  action:@selector(favorites:)];
+    
+    self.navigationItem.rightBarButtonItem = favorites;
+}
+
+- (void) favorites:(UIBarButtonItem *)sender {
+    FavoritesCollectionViewController *favoritesController = [[FavoritesCollectionViewController alloc]
+                                             initWithCollectionViewLayout:self.collectionViewLayout];
+    
+//    [self presentViewController:favoritesController animated:YES completion:nil];
+    [self showViewController:favoritesController sender:nil];
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -62,7 +80,7 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    ArtCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    __weak ArtCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     Art *art;
     if (_searchResult) {
@@ -73,6 +91,17 @@ static NSString * const reuseIdentifier = @"Cell";
     
     cell.title.text = art.title;
     cell.subtitle.text = art.desc;
+    
+    cell.isFavorite = [CoreDataManager.shared isFavorite:art];
+    
+    cell.markAsFavorite = ^{
+        if (cell.isFavorite) {
+            [CoreDataManager.shared removeFromFavorite:art];
+        } else {
+            [CoreDataManager.shared addToFavorite:art];
+        }
+        cell.isFavorite = !cell.isFavorite;
+    };
     
     CGPoint coordinate = CGPointMake(art.latitude.doubleValue, art.longitude.doubleValue);
     cell.coordinate = &(coordinate);
