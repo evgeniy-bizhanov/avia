@@ -13,6 +13,7 @@
 #import "CoreData/CoreDataManager.h"
 #import "ArtCollectionViewCell.h"
 #import "FavoritesCollectionViewController.h"
+#import <UserNotifications/UserNotifications.h>
 
 @interface ArtsCollectionViewController () <UISearchResultsUpdating>
 
@@ -99,6 +100,7 @@ static NSString * const reuseIdentifier = @"Cell";
             [CoreDataManager.shared removeFromFavorite:art];
         } else {
             [CoreDataManager.shared addToFavorite:art];
+            [self scheduleNotificationWithTitle:art.title];
         }
         cell.isFavorite = !cell.isFavorite;
     };
@@ -107,6 +109,31 @@ static NSString * const reuseIdentifier = @"Cell";
     cell.coordinate = &(coordinate);
     
     return cell;
+}
+
+- (void)scheduleNotificationWithTitle:(NSString *)title {
+    
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:title
+                                                                   message:@"Хотите добавить напоминание?"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Да" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        UNMutableNotificationContent *content = [UNMutableNotificationContent new];
+        
+        content.title = [NSString localizedUserNotificationStringForKey:title arguments:nil];
+        content.body = [NSString localizedUserNotificationStringForKey:@"Добавлено в избранное" arguments:nil];
+        content.sound = [UNNotificationSound defaultSound];
+        
+        UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:5 repeats:NO];
+        UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:@"AddFavorite" content:content trigger:trigger];
+        
+        [UNUserNotificationCenter.currentNotificationCenter addNotificationRequest:request withCompletionHandler:nil];
+    }];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Нет" style:UIAlertActionStyleCancel handler:nil];
+    
+    [alert addAction:defaultAction];
+    [alert addAction:cancelAction];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {

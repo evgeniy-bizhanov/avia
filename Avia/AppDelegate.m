@@ -8,10 +8,10 @@
 
 #import "AppDelegate.h"
 #import "TabBarViewController.h"
-//#import "PageController/AboutViewController.h"
 #import "PageController/PageViewController.h"
+#import <UserNotifications/UserNotifications.h>
 
-@interface AppDelegate ()
+@interface AppDelegate () <UNUserNotificationCenterDelegate>
 
 @end
 
@@ -33,6 +33,15 @@
         [NSUserDefaults.standardUserDefaults setBool:true forKey:@"AboutWasShown"];
         [viewController showViewController:[PageViewController new] sender:nil];
     }
+    
+    [UNUserNotificationCenter.currentNotificationCenter
+     requestAuthorizationWithOptions:UNAuthorizationOptionAlert | UNAuthorizationOptionSound
+     completionHandler:^(BOOL granted, NSError * _Nullable error) {
+         if (granted) {
+             UNUserNotificationCenter.currentNotificationCenter.delegate = self;
+         }
+     }];
+    
     return YES;
 }
 
