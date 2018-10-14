@@ -22,13 +22,15 @@
 - (void)setIsFavorite:(BOOL)isFavorite {
     _isFavorite = isFavorite;
     
-    if (isFavorite) {
-        _favoriteButton.backgroundColor = [UIColor colorWithRed:0.35 green:0.59 blue:0.82 alpha:0.9];
-        _favoriteButton.layer.borderColor = [[UIColor colorWithRed:0.3 green:0.5 blue:0.72 alpha:1.0] CGColor];
-    } else {
-        _favoriteButton.backgroundColor = [UIColor colorWithRed:0.95 green:0.98 blue:1.0 alpha:0.9];
-        _favoriteButton.layer.borderColor = [[UIColor colorWithRed:0.42 green:0.72 blue:0.93 alpha:1.0] CGColor];
-    }
+    [UIView animateWithDuration:.3 animations:^{
+        if (isFavorite) {
+            self->_favoriteButton.backgroundColor = [UIColor colorWithRed:0.35 green:0.59 blue:0.82 alpha:0.9];
+            self->_favoriteButton.layer.borderColor = [[UIColor colorWithRed:0.3 green:0.5 blue:0.72 alpha:1.0] CGColor];
+        } else {
+            self->_favoriteButton.backgroundColor = [UIColor colorWithRed:0.95 green:0.98 blue:1.0 alpha:0.9];
+            self->_favoriteButton.layer.borderColor = [[UIColor colorWithRed:0.42 green:0.72 blue:0.93 alpha:1.0] CGColor];
+        }
+    }];
 }
 
 
