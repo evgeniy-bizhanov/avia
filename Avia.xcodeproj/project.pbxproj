@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A11A4E121517E4E00EDCED0 /* Tasks in Resources */ = {isa = PBXBuildFile; fileRef = 7A11A4E021517E4E00EDCED0 /* Tasks */; };
+		1B711DEEF0A276B097851FF6 /* libPods-Avia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1110EDC325DCB7A5A850D1DC /* libPods-Avia.a */; };
 		7A15B6A021516ED900EE2B04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A15B69F21516ED900EE2B04 /* AppDelegate.m */; };
-		7A15B6A321516ED900EE2B04 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A15B6A221516ED900EE2B04 /* MainViewController.m */; };
+		7A15B6A321516ED900EE2B04 /* ArtsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A15B6A221516ED900EE2B04 /* ArtsViewController.m */; };
 		7A15B6A821516ED900EE2B04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A15B6A721516ED900EE2B04 /* Assets.xcassets */; };
 		7A15B6AB21516ED900EE2B04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A15B6A921516ED900EE2B04 /* LaunchScreen.storyboard */; };
 		7A15B6AE21516ED900EE2B04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A15B6AD21516ED900EE2B04 /* main.m */; };
@@ -17,16 +17,27 @@
 		7A1BD25E21611BDD00438189 /* ArtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BD25D21611BDD00438189 /* ArtViewController.m */; };
 		7A31BB66215FCBB000696BEA /* Art.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A31BB65215FCBB000696BEA /* Art.m */; };
 		7A31BB69215FD09300696BEA /* Arts.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A31BB68215FD09300696BEA /* Arts.m */; };
+		7A432EA52163F54B00EA9B25 /* ArtsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A432EA42163F54B00EA9B25 /* ArtsCollectionViewController.m */; };
+		7A432EA82163FFDD00EA9B25 /* ArtCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A432EA72163FFDD00EA9B25 /* ArtCollectionViewCell.m */; };
 		7A495768215A8DD500192CE4 /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A495767215A8DD500192CE4 /* ApiManager.m */; };
+		7A764A912163EA0D00C9B687 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A764A902163EA0D00C9B687 /* TabBarViewController.m */; };
+		7A89D31E217327A400A4936C /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A89D31D217327A400A4936C /* PageViewController.m */; };
+		7ABD3A2F2171C2FF0037F83C /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABD3A2E2171C2FF0037F83C /* AboutViewController.m */; };
+		7AFDEBD9216CB19C004E54C5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDEBD7216CB19C004E54C5 /* Model.xcdatamodeld */; };
+		7AFDEC0F216CC4CC004E54C5 /* MOArt+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDEC0D216CC4CC004E54C5 /* MOArt+CoreDataClass.m */; };
+		7AFDEC10216CC4CC004E54C5 /* MOArt+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDEC0E216CC4CC004E54C5 /* MOArt+CoreDataProperties.m */; };
+		7AFDEC14216CC523004E54C5 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDEC13216CC523004E54C5 /* CoreDataManager.m */; };
+		7AFDEC17216E656B004E54C5 /* FavoritesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDEC16216E656B004E54C5 /* FavoritesCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7A11A4E021517E4E00EDCED0 /* Tasks */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tasks; sourceTree = "<group>"; };
+		1110EDC325DCB7A5A850D1DC /* libPods-Avia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Avia.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		418A6AB6C9CA0C2A18338402 /* Pods-Avia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Avia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Avia/Pods-Avia.release.xcconfig"; sourceTree = "<group>"; };
 		7A15B69B21516ED800EE2B04 /* Avia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A15B69E21516ED800EE2B04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7A15B69F21516ED900EE2B04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7A15B6A121516ED900EE2B04 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		7A15B6A221516ED900EE2B04 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		7A15B6A121516ED900EE2B04 /* ArtsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtsViewController.h; sourceTree = "<group>"; };
+		7A15B6A221516ED900EE2B04 /* ArtsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtsViewController.m; sourceTree = "<group>"; };
 		7A15B6A721516ED900EE2B04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A15B6AA21516ED900EE2B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A15B6AC21516ED900EE2B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,8 +50,28 @@
 		7A31BB65215FCBB000696BEA /* Art.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Art.m; sourceTree = "<group>"; };
 		7A31BB67215FD09300696BEA /* Arts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Arts.h; sourceTree = "<group>"; };
 		7A31BB68215FD09300696BEA /* Arts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Arts.m; sourceTree = "<group>"; };
+		7A432EA32163F54B00EA9B25 /* ArtsCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtsCollectionViewController.h; sourceTree = "<group>"; };
+		7A432EA42163F54B00EA9B25 /* ArtsCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtsCollectionViewController.m; sourceTree = "<group>"; };
+		7A432EA62163FFDC00EA9B25 /* ArtCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtCollectionViewCell.h; sourceTree = "<group>"; };
+		7A432EA72163FFDD00EA9B25 /* ArtCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtCollectionViewCell.m; sourceTree = "<group>"; };
 		7A495766215A8DD500192CE4 /* ApiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
 		7A495767215A8DD500192CE4 /* ApiManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
+		7A764A8F2163EA0D00C9B687 /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		7A764A902163EA0D00C9B687 /* TabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		7A89D31C217327A400A4936C /* PageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
+		7A89D31D217327A400A4936C /* PageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		7ABD3A2D2171C2FF0037F83C /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		7ABD3A2E2171C2FF0037F83C /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		7AFDEBD8216CB19C004E54C5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		7AFDEC0B216CC4CC004E54C5 /* MOArt+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MOArt+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7AFDEC0C216CC4CC004E54C5 /* MOArt+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MOArt+CoreDataClass.h"; sourceTree = "<group>"; };
+		7AFDEC0D216CC4CC004E54C5 /* MOArt+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MOArt+CoreDataClass.m"; sourceTree = "<group>"; };
+		7AFDEC0E216CC4CC004E54C5 /* MOArt+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MOArt+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7AFDEC12216CC523004E54C5 /* CoreDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		7AFDEC13216CC523004E54C5 /* CoreDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		7AFDEC15216E656B004E54C5 /* FavoritesCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoritesCollectionViewController.h; sourceTree = "<group>"; };
+		7AFDEC16216E656B004E54C5 /* FavoritesCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoritesCollectionViewController.m; sourceTree = "<group>"; };
+		E463EFFFFC7D99D573046ECE /* Pods-Avia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Avia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Avia/Pods-Avia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,18 +79,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B711DEEF0A276B097851FF6 /* libPods-Avia.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19219CE1BE33ADD611961868 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E463EFFFFC7D99D573046ECE /* Pods-Avia.debug.xcconfig */,
+				418A6AB6C9CA0C2A18338402 /* Pods-Avia.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7A15B69221516ED800EE2B04 = {
 			isa = PBXGroup;
 			children = (
-				7A11A4E021517E4E00EDCED0 /* Tasks */,
 				7A15B69D21516ED800EE2B04 /* Avia */,
+				7AFDEBDA216CB1A9004E54C5 /* Resources */,
 				7A15B69C21516ED800EE2B04 /* Products */,
+				19219CE1BE33ADD611961868 /* Pods */,
+				F2015CB0D1B6446DED0DAB22 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,19 +117,26 @@
 		7A15B69D21516ED800EE2B04 /* Avia */ = {
 			isa = PBXGroup;
 			children = (
+				7ABD3A2C2171C2D10037F83C /* PageController */,
+				7AFDEC11216CC505004E54C5 /* CoreData */,
 				7A1BD258216116D400438189 /* Helper */,
 				7ABD5155215B4F85004C0037 /* Entity */,
 				7A495766215A8DD500192CE4 /* ApiManager.h */,
 				7A495767215A8DD500192CE4 /* ApiManager.m */,
 				7A15B69E21516ED800EE2B04 /* AppDelegate.h */,
 				7A15B69F21516ED900EE2B04 /* AppDelegate.m */,
-				7A15B6A121516ED900EE2B04 /* MainViewController.h */,
-				7A15B6A221516ED900EE2B04 /* MainViewController.m */,
+				7A764A8F2163EA0D00C9B687 /* TabBarViewController.h */,
+				7A764A902163EA0D00C9B687 /* TabBarViewController.m */,
+				7A15B6A121516ED900EE2B04 /* ArtsViewController.h */,
+				7A15B6A221516ED900EE2B04 /* ArtsViewController.m */,
 				7A1BD25C21611BDD00438189 /* ArtViewController.h */,
 				7A1BD25D21611BDD00438189 /* ArtViewController.m */,
-				7A15B6A721516ED900EE2B04 /* Assets.xcassets */,
-				7A15B6A921516ED900EE2B04 /* LaunchScreen.storyboard */,
-				7A15B6AC21516ED900EE2B04 /* Info.plist */,
+				7A432EA32163F54B00EA9B25 /* ArtsCollectionViewController.h */,
+				7A432EA42163F54B00EA9B25 /* ArtsCollectionViewController.m */,
+				7AFDEC15216E656B004E54C5 /* FavoritesCollectionViewController.h */,
+				7AFDEC16216E656B004E54C5 /* FavoritesCollectionViewController.m */,
+				7A432EA62163FFDC00EA9B25 /* ArtCollectionViewCell.h */,
+				7A432EA72163FFDD00EA9B25 /* ArtCollectionViewCell.m */,
 				7A15B6AD21516ED900EE2B04 /* main.m */,
 			);
 			path = Avia;
@@ -101,15 +151,58 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		7ABD3A2C2171C2D10037F83C /* PageController */ = {
+			isa = PBXGroup;
+			children = (
+				7ABD3A2D2171C2FF0037F83C /* AboutViewController.h */,
+				7ABD3A2E2171C2FF0037F83C /* AboutViewController.m */,
+				7A89D31C217327A400A4936C /* PageViewController.h */,
+				7A89D31D217327A400A4936C /* PageViewController.m */,
+			);
+			path = PageController;
+			sourceTree = "<group>";
+		};
 		7ABD5155215B4F85004C0037 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				7AFDEC0B216CC4CC004E54C5 /* MOArt+CoreDataProperties.h */,
+				7AFDEC0C216CC4CC004E54C5 /* MOArt+CoreDataClass.h */,
+				7AFDEC0D216CC4CC004E54C5 /* MOArt+CoreDataClass.m */,
+				7AFDEC0E216CC4CC004E54C5 /* MOArt+CoreDataProperties.m */,
 				7A31BB64215FCBB000696BEA /* Art.h */,
 				7A31BB65215FCBB000696BEA /* Art.m */,
 				7A31BB67215FD09300696BEA /* Arts.h */,
 				7A31BB68215FD09300696BEA /* Arts.m */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		7AFDEBDA216CB1A9004E54C5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7AFDEBD7216CB19C004E54C5 /* Model.xcdatamodeld */,
+				7A15B6A721516ED900EE2B04 /* Assets.xcassets */,
+				7A15B6A921516ED900EE2B04 /* LaunchScreen.storyboard */,
+				7A15B6AC21516ED900EE2B04 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7AFDEC11216CC505004E54C5 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7AFDEC12216CC523004E54C5 /* CoreDataManager.h */,
+				7AFDEC13216CC523004E54C5 /* CoreDataManager.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		F2015CB0D1B6446DED0DAB22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1110EDC325DCB7A5A850D1DC /* libPods-Avia.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +212,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A15B6B121516ED900EE2B04 /* Build configuration list for PBXNativeTarget "Avia" */;
 			buildPhases = (
+				06BB7E8C07A892B0672FB5B9 /* [CP] Check Pods Manifest.lock */,
 				7A15B69721516ED800EE2B04 /* Sources */,
 				7A15B69821516ED800EE2B04 /* Frameworks */,
 				7A15B69921516ED800EE2B04 /* Resources */,
@@ -143,6 +237,7 @@
 				TargetAttributes = {
 					7A15B69A21516ED800EE2B04 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -169,7 +264,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A11A4E121517E4E00EDCED0 /* Tasks in Resources */,
 				7A15B6AB21516ED900EE2B04 /* LaunchScreen.storyboard in Resources */,
 				7A15B6A821516ED900EE2B04 /* Assets.xcassets in Resources */,
 			);
@@ -177,19 +271,50 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		06BB7E8C07A892B0672FB5B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Avia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7A15B69721516ED800EE2B04 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AFDEC0F216CC4CC004E54C5 /* MOArt+CoreDataClass.m in Sources */,
 				7A495768215A8DD500192CE4 /* ApiManager.m in Sources */,
-				7A15B6A321516ED900EE2B04 /* MainViewController.m in Sources */,
+				7A432EA82163FFDD00EA9B25 /* ArtCollectionViewCell.m in Sources */,
+				7A15B6A321516ED900EE2B04 /* ArtsViewController.m in Sources */,
 				7A15B6AE21516ED900EE2B04 /* main.m in Sources */,
 				7A31BB69215FD09300696BEA /* Arts.m in Sources */,
 				7A1BD25E21611BDD00438189 /* ArtViewController.m in Sources */,
 				7A15B6A021516ED900EE2B04 /* AppDelegate.m in Sources */,
 				7A31BB66215FCBB000696BEA /* Art.m in Sources */,
+				7ABD3A2F2171C2FF0037F83C /* AboutViewController.m in Sources */,
+				7A764A912163EA0D00C9B687 /* TabBarViewController.m in Sources */,
+				7A89D31E217327A400A4936C /* PageViewController.m in Sources */,
+				7A432EA52163F54B00EA9B25 /* ArtsCollectionViewController.m in Sources */,
 				7A1BD25B216116ED00438189 /* Geo.m in Sources */,
+				7AFDEC17216E656B004E54C5 /* FavoritesCollectionViewController.m in Sources */,
+				7AFDEC14216CC523004E54C5 /* CoreDataManager.m in Sources */,
+				7AFDEBD9216CB19C004E54C5 /* Model.xcdatamodeld in Sources */,
+				7AFDEC10216CC4CC004E54C5 /* MOArt+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,34 +446,41 @@
 		};
 		7A15B6B221516ED900EE2B04 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E463EFFFFC7D99D573046ECE /* Pods-Avia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6TZ3MZ977X;
-				INFOPLIST_FILE = Avia/Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bizhanov.Avia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		7A15B6B321516ED900EE2B04 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 418A6AB6C9CA0C2A18338402 /* Pods-Avia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6TZ3MZ977X;
-				INFOPLIST_FILE = Avia/Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bizhanov.Avia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -375,6 +507,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7AFDEBD7216CB19C004E54C5 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7AFDEBD8216CB19C004E54C5 /* Model.xcdatamodel */,
+			);
+			currentVersion = 7AFDEBD8216CB19C004E54C5 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7A15B69321516ED800EE2B04 /* Project object */;
 }
