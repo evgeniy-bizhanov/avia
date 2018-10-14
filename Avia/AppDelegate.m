@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "TabBarViewController.h"
+//#import "PageController/AboutViewController.h"
+#import "PageController/PageViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,12 +23,16 @@
     CGRect frame = [UIScreen mainScreen].bounds;
     self.window = [[UIWindow alloc] initWithFrame:frame];
 
-    TabBarViewController *viewController = [[TabBarViewController alloc] init];
-    viewController.view.backgroundColor = [UIColor whiteColor];
+    UIViewController *viewController = [TabBarViewController new];
     
     self.window.rootViewController = viewController;
     [self.window makeKeyAndVisible];
     
+    BOOL aboutWasShown = [NSUserDefaults.standardUserDefaults boolForKey:@"AboutWasShown"];
+    if(!aboutWasShown) {
+        [NSUserDefaults.standardUserDefaults setBool:true forKey:@"AboutWasShown"];
+        [viewController showViewController:[PageViewController new] sender:nil];
+    }
     return YES;
 }
 
@@ -62,6 +68,5 @@
         abort();
     }
 }
-
 
 @end

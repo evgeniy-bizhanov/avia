@@ -21,6 +21,8 @@
 		7A432EA82163FFDD00EA9B25 /* ArtCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A432EA72163FFDD00EA9B25 /* ArtCollectionViewCell.m */; };
 		7A495768215A8DD500192CE4 /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A495767215A8DD500192CE4 /* ApiManager.m */; };
 		7A764A912163EA0D00C9B687 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A764A902163EA0D00C9B687 /* TabBarViewController.m */; };
+		7A89D31E217327A400A4936C /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A89D31D217327A400A4936C /* PageViewController.m */; };
+		7ABD3A2F2171C2FF0037F83C /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABD3A2E2171C2FF0037F83C /* AboutViewController.m */; };
 		7AFDEBD9216CB19C004E54C5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDEBD7216CB19C004E54C5 /* Model.xcdatamodeld */; };
 		7AFDEC0F216CC4CC004E54C5 /* MOArt+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDEC0D216CC4CC004E54C5 /* MOArt+CoreDataClass.m */; };
 		7AFDEC10216CC4CC004E54C5 /* MOArt+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDEC0E216CC4CC004E54C5 /* MOArt+CoreDataProperties.m */; };
@@ -56,6 +58,10 @@
 		7A495767215A8DD500192CE4 /* ApiManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
 		7A764A8F2163EA0D00C9B687 /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		7A764A902163EA0D00C9B687 /* TabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		7A89D31C217327A400A4936C /* PageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
+		7A89D31D217327A400A4936C /* PageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		7ABD3A2D2171C2FF0037F83C /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		7ABD3A2E2171C2FF0037F83C /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		7AFDEBD8216CB19C004E54C5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		7AFDEC0B216CC4CC004E54C5 /* MOArt+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MOArt+CoreDataProperties.h"; sourceTree = "<group>"; };
 		7AFDEC0C216CC4CC004E54C5 /* MOArt+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MOArt+CoreDataClass.h"; sourceTree = "<group>"; };
@@ -111,6 +117,7 @@
 		7A15B69D21516ED800EE2B04 /* Avia */ = {
 			isa = PBXGroup;
 			children = (
+				7ABD3A2C2171C2D10037F83C /* PageController */,
 				7AFDEC11216CC505004E54C5 /* CoreData */,
 				7A1BD258216116D400438189 /* Helper */,
 				7ABD5155215B4F85004C0037 /* Entity */,
@@ -142,6 +149,17 @@
 				7A1BD25A216116ED00438189 /* Geo.m */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		7ABD3A2C2171C2D10037F83C /* PageController */ = {
+			isa = PBXGroup;
+			children = (
+				7ABD3A2D2171C2FF0037F83C /* AboutViewController.h */,
+				7ABD3A2E2171C2FF0037F83C /* AboutViewController.m */,
+				7A89D31C217327A400A4936C /* PageViewController.h */,
+				7A89D31D217327A400A4936C /* PageViewController.m */,
+			);
+			path = PageController;
 			sourceTree = "<group>";
 		};
 		7ABD5155215B4F85004C0037 /* Entity */ = {
@@ -288,7 +306,9 @@
 				7A1BD25E21611BDD00438189 /* ArtViewController.m in Sources */,
 				7A15B6A021516ED900EE2B04 /* AppDelegate.m in Sources */,
 				7A31BB66215FCBB000696BEA /* Art.m in Sources */,
+				7ABD3A2F2171C2FF0037F83C /* AboutViewController.m in Sources */,
 				7A764A912163EA0D00C9B687 /* TabBarViewController.m in Sources */,
+				7A89D31E217327A400A4936C /* PageViewController.m in Sources */,
 				7A432EA52163F54B00EA9B25 /* ArtsCollectionViewController.m in Sources */,
 				7A1BD25B216116ED00438189 /* Geo.m in Sources */,
 				7AFDEC17216E656B004E54C5 /* FavoritesCollectionViewController.m in Sources */,
