@@ -58,7 +58,7 @@
     
     _button = [UIButton buttonWithType:UIButtonTypeCustom];
     _button.frame = buttonFrame;
-    [_button setTitle:@"Завершить" forState:UIControlStateNormal];
+    [_button setTitle:NSLocalizedString(@"AboutClose", nil) forState:UIControlStateNormal];
     [_button addTarget:self action:@selector(mainController:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:_aboutTitle];

@@ -23,7 +23,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"Favorites";
+    self.title = NSLocalizedString(@"FavoritesTitle", nil);
     
     self.collectionView.backgroundColor = UIColor.whiteColor;
     _array = [CoreDataManager.shared favorites];

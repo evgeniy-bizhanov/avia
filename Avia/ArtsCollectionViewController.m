@@ -50,7 +50,7 @@ static NSString * const reuseIdentifier = @"Cell";
     }];
     
     UIBarButtonItem *favorites = [[UIBarButtonItem alloc]
-                                  initWithTitle:@"Favorites"
+                                  initWithTitle:NSLocalizedString(@"FavoritesTitle", nil)
                                   style:UIBarButtonItemStylePlain
                                   target:self
                                   action:@selector(favorites:)];
@@ -114,14 +114,14 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)scheduleNotificationWithTitle:(NSString *)title {
     
     UIAlertController* alert = [UIAlertController alertControllerWithTitle:title
-                                                                   message:@"Хотите добавить напоминание?"
+                                                                   message:NSLocalizedString(@"NotificationAlertQuestion", nil)
                                                             preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Да" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"NotificationAlertYes", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         UNMutableNotificationContent *content = [UNMutableNotificationContent new];
         
         content.title = [NSString localizedUserNotificationStringForKey:title arguments:nil];
-        content.body = [NSString localizedUserNotificationStringForKey:@"Добавлено в избранное" arguments:nil];
+        content.body = [NSString localizedUserNotificationStringForKey:NSLocalizedString(@"NotificationFavoritesAdded", nil) arguments:nil];
         content.sound = [UNNotificationSound defaultSound];
         
         UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:5 repeats:NO];
@@ -129,7 +129,8 @@ static NSString * const reuseIdentifier = @"Cell";
         
         [UNUserNotificationCenter.currentNotificationCenter addNotificationRequest:request withCompletionHandler:nil];
     }];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Нет" style:UIAlertActionStyleCancel handler:nil];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"NotificationAlertNo", nil) style:UIAlertActionStyleCancel handler:nil];
     
     [alert addAction:defaultAction];
     [alert addAction:cancelAction];

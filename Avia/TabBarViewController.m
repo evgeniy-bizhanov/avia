@@ -20,7 +20,7 @@
 
 - (ArtsViewController *)resolveArtsController {
     ArtsViewController *controller = [ArtsViewController new];
-    controller.title = @"Arts";
+    controller.title = NSLocalizedString(@"ArtTitle", nil);
     return controller;
 }
 
@@ -39,7 +39,7 @@
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     
     ArtsCollectionViewController *controller = [[ArtsCollectionViewController alloc] initWithCollectionViewLayout:layout];
-    controller.title = @"Search Arts";
+    controller.title = NSLocalizedString(@"ArtSearch", nil);
     
     return controller;
 }

@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  Avia
+
+  Created by Евгений Бижанов on 19/10/2018.
+  Copyright © 2018 Евгений Бижанов. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "Avia";

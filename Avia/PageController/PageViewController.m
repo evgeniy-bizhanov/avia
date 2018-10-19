@@ -23,7 +23,11 @@
                                   options:nil];
     
     if(self) {
-        _contentArray = @[@"Hello", @"World", @"!"];
+        _contentArray = @[
+                          NSLocalizedString(@"AboutHello", nil),
+                          NSLocalizedString(@"AboutWorld", nil),
+                          @"!"
+                          ];
         self.dataSource = self;
         
         AboutViewController *firstController = [self aboutViewControllerAtIndex:0];
