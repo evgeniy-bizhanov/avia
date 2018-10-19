@@ -7,9 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "MainViewController.h"
+#import "TabBarViewController.h"
+#import "PageController/PageViewController.h"
+#import <UserNotifications/UserNotifications.h>
 
-@interface AppDelegate ()
+@interface AppDelegate () <UNUserNotificationCenterDelegate>
 
 @end
 
@@ -20,17 +22,25 @@
     
     CGRect frame = [UIScreen mainScreen].bounds;
     self.window = [[UIWindow alloc] initWithFrame:frame];
+
+    UIViewController *viewController = [TabBarViewController new];
     
-    self.window.backgroundColor = UIColor.redColor;
-    
-    MainViewController *viewController = [[MainViewController alloc] init];
-    viewController.view.backgroundColor = [UIColor whiteColor];
-    
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-    
-    self.window.rootViewController = navigationController;
-    
+    self.window.rootViewController = viewController;
     [self.window makeKeyAndVisible];
+    
+    BOOL aboutWasShown = [NSUserDefaults.standardUserDefaults boolForKey:@"AboutWasShown"];
+    if(!aboutWasShown) {
+        [NSUserDefaults.standardUserDefaults setBool:true forKey:@"AboutWasShown"];
+        [viewController showViewController:[PageViewController new] sender:nil];
+    }
+    
+    [UNUserNotificationCenter.currentNotificationCenter
+     requestAuthorizationWithOptions:UNAuthorizationOptionAlert | UNAuthorizationOptionSound
+     completionHandler:^(BOOL granted, NSError * _Nullable error) {
+         if (granted) {
+             UNUserNotificationCenter.currentNotificationCenter.delegate = self;
+         }
+     }];
     
     return YES;
 }

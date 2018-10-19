@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  ViewController.h
 //  Avia
 //
 //  Created by Евгений Бижанов on 18.09.2018.
@@ -7,11 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreData/CoreData.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface ArtsViewController : UIViewController
 
-@property (strong, nonatomic) UIWindow *window;
 
 @end
 

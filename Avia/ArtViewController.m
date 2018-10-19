@@ -21,6 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = _art.title;
+    
     _subtitle = [[UITextView alloc] initWithFrame:self.view.frame];
     
     UIFont *font = [UIFont systemFontOfSize:15];
